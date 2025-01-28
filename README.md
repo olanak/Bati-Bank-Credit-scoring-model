@@ -1,21 +1,19 @@
-Credit Scoring Model for Bati Bank
+# Bati Bank Credit Scoring API
 
-Overview
+This project provides an API for predicting customer creditworthiness using a trained Random Forest model. The API allows users to input customer behavioral features and returns predictions and probabilities for their credit score category.
 
-This project involves building a credit scoring model for Bati Bank, a leading financial service provider. The objective is to enable a "buy-now-pay-later" service by assessing customers' creditworthiness using data provided by an eCommerce platform. The model predicts the likelihood of default, assigns credit scores, and estimates optimal loan amounts and durations.
+---
 
-Features and Deliverables
+## Features
 
-1. Understanding Credit Risk:
+- **Prediction Endpoint**: Provides creditworthiness predictions based on customer data.
+- **Input Validation**: Ensures the required fields are present in the input JSON.
+- **Machine Learning Model**: Leverages a pre-trained Random Forest model for accurate predictions.
+- **Deployed on Render**: The API is hosted at [Bati Bank Credit Scoring API](https://bati-bank-credit-scoring-model.onrender.com).
 
-Study of credit risk concepts, including probability of default (PD), loss given default (LGD), and exposure at default (EAD).
+---
 
-Review of RFMS scoring and Basel II compliance requirements.
+## API Overview
 
-2. Exploratory Data Analysis (EDA):
-
-Analysis of dataset structure, summary statistics, and distributions.
-
-Outlier detection and handling.
-
-Correlation analysis and data visualization.
+### Base URL
+The API is available at:
