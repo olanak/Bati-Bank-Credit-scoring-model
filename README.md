@@ -43,7 +43,7 @@ The API expects a JSON payload with the following fields:
         "Amount_WoE": 0.5
     }
 ]
-
+```
 
 Response Format
 The API returns a JSON object containing:
@@ -51,9 +51,17 @@ The API returns a JSON object containing:
 predictions: A list of predicted credit categories (e.g., 0 for "Bad", 1 for "Good").
 probabilities: A list of probabilities for the "Good" credit category.
 Example Response
-
+```json
 {
     "predictions": [1],
     "probabilities": [0.85]
 }
+```
+How to Use the API
+Testing the API with curl
+
+curl -X POST https://bati-bank-credit-scoring-model.onrender.com/predict \
+-H "Content-Type: application/json" \
+-d '[{"Recency": 5, "Frequency": 10, "Monetary": 300, "Amount_WoE": 0.5}]'
+
 
