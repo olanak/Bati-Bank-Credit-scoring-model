@@ -59,11 +59,12 @@ Example Response
 ```
 How to Use the API
 Testing the API with curl
-
+```bash
 curl -X POST https://bati-bank-credit-scoring-model.onrender.com/predict \
 -H "Content-Type: application/json" \
 -d '[{"Recency": 5, "Frequency": 10, "Monetary": 300, "Amount_WoE": 0.5}]'
-
+```
+```bash
 import requests
 
 url = "https://bati-bank-credit-scoring-model.onrender.com/predict"
@@ -73,6 +74,7 @@ data = [
 
 response = requests.post(url, json=data)
 print(response.json())
+```
 
 Installation for Local Development
 Prerequisites
@@ -81,8 +83,8 @@ Virtual environment (recommended)
 Steps
 1. Clone the repository:
 ```bash
-git clone <repository_url>
-cd <repository_name>
+git clone https://github.com/olanak/Bati-Bank-Credit-scoring-model
+cd Bati-Bank-Credit-scoring-model
 ```
 
 2. Create and activate a virtual environment:
@@ -95,4 +97,33 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+4. Run the Flask application:
+```bash
+   python app.py
+```
+The server will start on http://0.0.0.0:5000/
+
+Deployment
+This API is deployed on Render at the following URL:
+```bash
+https://bati-bank-credit-scoring-model.onrender.com
+```
+To redeploy or update the app:
+1. Commit your changes to the GitHub repository.
+2. Render will automatically detect the changes and redeploy the app.
+
+Notes
+Ensure the best_rf_model.pkl file is present in the models directory.
+Use the correct features as required by the model for accurate predictions.
+The app is designed to run both locally and on Render.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Special thanks to the 10 Academy team for their guidance and support throughout this project.
+
+
+
+
 
