@@ -64,4 +64,14 @@ curl -X POST https://bati-bank-credit-scoring-model.onrender.com/predict \
 -H "Content-Type: application/json" \
 -d '[{"Recency": 5, "Frequency": 10, "Monetary": 300, "Amount_WoE": 0.5}]'
 
+import requests
+
+url = "https://bati-bank-credit-scoring-model.onrender.com/predict"
+data = [
+    {"Recency": 5, "Frequency": 10, "Monetary": 300, "Amount_WoE": 0.5}
+]
+
+response = requests.post(url, json=data)
+print(response.json())
+
 
