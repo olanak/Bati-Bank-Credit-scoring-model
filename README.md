@@ -44,3 +44,16 @@ The API expects a JSON payload with the following fields:
     }
 ]
 
+
+Response Format
+The API returns a JSON object containing:
+
+predictions: A list of predicted credit categories (e.g., 0 for "Bad", 1 for "Good").
+probabilities: A list of probabilities for the "Good" credit category.
+Example Response
+
+{
+    "predictions": [1],
+    "probabilities": [0.85]
+}
+
