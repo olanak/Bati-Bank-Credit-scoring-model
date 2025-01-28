@@ -45,7 +45,7 @@ The API expects a JSON payload with the following fields:
 ]
 ```
 
-Response Format
+## Response Format
 The API returns a JSON object containing:
 
 predictions: A list of predicted credit categories (e.g., 0 for "Bad", 1 for "Good").
@@ -57,7 +57,7 @@ Example Response
     "probabilities": [0.85]
 }
 ```
-How to Use the API
+##  How to Use the API
 Testing the API with curl
 ```bash
 curl -X POST https://bati-bank-credit-scoring-model.onrender.com/predict \
@@ -76,7 +76,7 @@ response = requests.post(url, json=data)
 print(response.json())
 ```
 
-Installation for Local Development
+## Installation for Local Development
 Prerequisites
 Python 3.12 or later
 Virtual environment (recommended)
@@ -103,7 +103,7 @@ pip install -r requirements.txt
 ```
 The server will start on http://0.0.0.0:5000/
 
-Deployment
+##  Deployment
 This API is deployed on Render at the following URL:
 ```bash
 https://bati-bank-credit-scoring-model.onrender.com
@@ -112,15 +112,15 @@ To redeploy or update the app:
 1. Commit your changes to the GitHub repository.
 2. Render will automatically detect the changes and redeploy the app.
 
-Notes
+## Notes
 Ensure the best_rf_model.pkl file is present in the models directory.
 Use the correct features as required by the model for accurate predictions.
 The app is designed to run both locally and on Render.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 Special thanks to the 10 Academy team for their guidance and support throughout this project.
 
 
