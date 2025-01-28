@@ -74,4 +74,15 @@ data = [
 response = requests.post(url, json=data)
 print(response.json())
 
+Installation for Local Development
+Prerequisites
+Python 3.12 or later
+Virtual environment (recommended)
+Steps
+Clone the repository:
+
+git clone <repository_url>
+cd <repository_name>
+
+
 
