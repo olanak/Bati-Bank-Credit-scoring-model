@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 # Load your trained model
-model = joblib.load('../models/best_rf_model.pkl')
+model = joblib.load('models/best_rf_model.pkl')
 
 app = Flask(__name__)
 
